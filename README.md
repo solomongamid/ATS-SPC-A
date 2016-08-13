@@ -6,8 +6,8 @@
   1. Utilisateur
   2. Administrateur qui contrôle la base de données.
 
-![](copyregst.png)
-![](mockup.png)
-![](users_data.png)
-![](welcome.png)
-![](welcomeadmin.png)
+## Authors
+
+* YAHYA YACOUB Elmardi
+* ABDELGADIER Suliman
+* SYED ZEESHAN Ali Zaïdi
