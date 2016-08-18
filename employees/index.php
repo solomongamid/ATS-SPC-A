@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <br />
                     <label>Password :</label>
                     <input type="password" name="password" class="box" />
-                    <br/>
+                    <br />
                     <br />
                     <input type="submit" value=" Submit " />
                     <br />
