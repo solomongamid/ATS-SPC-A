@@ -31,47 +31,54 @@
    
    <head>
       <title>Login Page</title>
-      
+      <link rel="stylesheet" href="./material.min.css">
+<script src="./material.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
       <style type = "text/css">
-         body {
-            font-family:Arial, Helvetica, sans-serif;
-            font-size:14px;
-         }
-         
-         label {
-            font-weight:bold;
-            width:100px;
-            font-size:14px;
-         }
-         
-         .box {
-            border:#666666 solid 1px;
-         }
+      body { background-image: url("accenture.jpg");
+
+   }
+         .mdl-layout {
+   align-items: center;
+  justify-content: center;
+}
+.mdl-layout__content {
+   padding: 24px;
+   flex: none;
+}
       </style>
       
    </head>
    
-   <body bgcolor = "#FFFFFF">
-	
-      <div align = "center">
-         <div style = "width:300px; border: solid 1px #333333; " align = "left">
-            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Login</b></div>
-				
-            <div style = "margin:30px">
-               
-               <form action = "" method = "post">
-                  <label>UserName  :</label><input type = "text" name = "username" class = "box"/><br /><br />
-                  <label>Password  :</label><input type = "password" name = "password" class = "box" /><br/><br />
-                  <input type = "submit" value = " Submit "/><br />
-               </form>
-               
-               <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
-					
-            </div>
-				
+   <body>
+
+   <div class="mdl-layout mdl-js-layout">
+   <main class="mdl-layout__content">
+      <div class="mdl-card mdl-shadow--6dp">
+         <div class="mdl-card__title mdl-color--primary mdl-color-text--white">
+            <h2 class="mdl-card__title-text">Accenture Attendance App</h2>
          </div>
-			
+      <div class="mdl-card__supporting-text">
+            <form action = "" method = "post">
+               <div class="mdl-textfield mdl-js-textfield">
+                  <input class="mdl-textfield__input" type="text" id="username" name = "username"/>
+                  <label class="mdl-textfield__label" for="username">Username</label>
+               </div>
+               <div class="mdl-textfield mdl-js-textfield">
+                  <input class="mdl-textfield__input" type="password" id="userpass" name = "password" />
+                  <label class="mdl-textfield__label" for="userpass">Password</label>
+               </div>
+            
+         </div>
+         <div class="mdl-card__actions mdl-card--border">
+            <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" type="submit" value=" Submit">Log in</button>
+            </form>
+            <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
+         </div>
       </div>
+   </main>
+</div>
+
 
    </body>
 </html>
