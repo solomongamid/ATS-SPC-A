@@ -1,13 +1,17 @@
-<!DOCTYPE html>
+<?php
+   include('session.php');
+?>
 <html>
-
-<head>
-    <title>Bienvenue Admin</title>
-</head>
-
-<body>
-    <h1>Bienvenue<?php echo $login_session; ?></h1>
-    vous êtes arrivés à <?php $time = date("m/d/y G.i:s <br>", time()); echo "$time"; ?>
-</body>
-
+   
+   <head>
+      <title>Welcome Admin</title>
+   </head>
+   
+   <body>
+      <h1>Welcome <?php echo $login_session; ?></h1> 
+      <h2><a href = "logout.php">Sign Out</a></h2>
+      <h2><a href = "signup.php">Registration</a></h2>
+      <h2><a href = "process.php">Employees data</a></h2>
+   </body>
+   
 </html>
