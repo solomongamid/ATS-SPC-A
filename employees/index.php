@@ -8,17 +8,18 @@
       $myusername = mysqli_real_escape_string($db,$_POST['username']);
       $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
       
-      $sql = "SELECT id FROM users WHERE user_name = '$myusername' and user_password = '$mypassword'";
+      $sql = "SELECT id FROM users WHERE name = '$myusername' and passcode = '$mypassword'";
       $result = mysqli_query($db,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      $active = $row['active'];
+      $active = $row['id'];
       
       $count = mysqli_num_rows($result);
       
       // If result matched $myusername and $mypassword, table row must be 1 row
 		
       if($count == 1) {
-        
+         $sql_1 = "INSERT INTO checkins (user_id,arrival_time) VALUES ('$active',NOW())";
+         $result_1 = mysqli_query($db,$sql_1);
          $_SESSION['login_user'] = $myusername;
          
          header("location: welcome.php");
@@ -32,8 +33,8 @@
    <head>
       <title>Login Page</title>
       <link rel="stylesheet" href="./material.min.css">
-<script src="./material.min.js"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <script src="./material.min.js"></script>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
       <style type = "text/css">
       body { background-image: url("accenture.jpg");
 
