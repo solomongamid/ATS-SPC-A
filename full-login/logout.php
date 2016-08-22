@@ -3,5 +3,5 @@
 session_start();
 
 if (session_destroy()) {
-    header('Location: logIn.php');
+    header('Location: login.php');
 }
