@@ -1,12 +1,12 @@
-# ATS SPC - Groupe A - Dispositif 1
+# ATS SPC - Group A
 
-- Une Application de Gestion des collaborateurs tout les jours ouvrable.
-- A pour objetif de contrôler les heures,les dates et les jours ouvrable.
-- On a deux types pour utiliser :
-  1. Utilisateur
-  2. Administrateur qui contrôle la base de données.
+- A staff Management Application for all working days.
+- Objective to control times, dates of arrivals.
+- We have two types of use:
+   1. Users
+   2. Administrator that controls the database
 
-## Auteurs
+## Authors
 
 - YAHYA YACOUB Elmardi
 - ABDELGADIER Suliman
@@ -29,12 +29,12 @@ CREATE TABLE IF NOT EXISTS `checkins` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_bin AUTO_INCREMENT=28 ;
 ```
-- in the `config.php` file:
+- in `config.php` files:
 ```php
 define('DB_SERVER', 'localhost'); // Host name
 define('DB_USERNAME', 'root'); // Mysql username
-define('DB_PASSWORD', 'simplonco');   // Mysql password
-define('DB_DATABASE', 'ATS_SPC');  // Database name
+define('DB_PASSWORD', 'simplonco'); // Mysql password
+define('DB_DATABASE', 'ATS_SPC'); // Database name
 ```
 
 ## Mockups
