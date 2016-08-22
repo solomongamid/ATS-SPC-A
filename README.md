@@ -6,11 +6,15 @@
   1. Utilisateur
   2. Administrateur qui contrôle la base de données.
 
-## Authors
+## Auteurs
 
 - YAHYA YACOUB Elmardi
 - ABDELGADIER Suliman
 - SYED ZEESHAN Ali Zaïdi
+
+## Installation
+
+_TODO.._
 
 ## Mockups
 
