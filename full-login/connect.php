@@ -3,34 +3,34 @@
 include 'config.php';
 session_start();
 
-function NewUser()
+function newUser()
 {
     $fullname = $_POST['name'];
     $lastname = $_POST['lastname'];
     $userName = $_POST['user'];
     $email = $_POST['email'];
     $password = $_POST['pass'];
-    $query = "INSERT INTO users (first_name,last_name,user_name,email,user_password) VALUES ('$fullname','$lastname','$userName','$email','$password')";
+    $query = "INSERT INTO users (first_name, last_name, user_name, email, user_password) VALUES ('$fullname', '$lastname', '$userName', '$email', '$password')";
     $data = mysql_query($query) or die(mysql_error());
     if ($data) {
         echo 'YOUR REGISTRATION IS COMPLETED...';
     }
 }
 
-function SignUp()
+function signUp()
 {
     if (!empty($_POST['user'])) {
-    //checking the 'user' name which is from Sign-Up.html, is it empty or have some text
-    $query = mysql_query('SELECT user_name FROM users ');
+        //checking the 'user' name which is from Sign-Up.html, is it empty or have some text
+        $query = mysql_query('SELECT user_name FROM users');
         if ($query != '$_POST[user]') {
-            newuser();
+            newUser();
         } else {
             echo 'SORRY...YOU ARE ALREADY REGISTERED USER...';
         }
     }
 }
 if (isset($_POST['submit'])) {
-    SignUp();
+    signUp();
 }
 ?>
 <!DOCTYPE html>
