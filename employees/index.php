@@ -77,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" type="submit" value=" Submit">Log in</button>
                     </form>
                     <div style="font-size:11px; color:#cc0000; margin-top:10px">
-                        <?php echo $error; ?>
+                        <?php if (isset($error)) { echo $error; } ?>
                     </div>
                 </div>
             </div>
